@@ -99,8 +99,7 @@ def main():
                <h2 style="color:green ;text-align:center;"> Хорошая новость, клиент остаётся в банке! </h2>
                </div>
             """
-    if int(Age)-int(Tenure)<18: 
-        st.error('Внимание проверьте данные возраст и срок обслуживания')
+
 
 def load_model():
     with open("model.pickle", "rb") as file:
@@ -109,7 +108,6 @@ def load_model():
     from load_model import load_model
 
     model = load_model()
-
 
 # def user_input_features():
 #     Age = st.slider('Возраст', 18, 92, 31)
@@ -131,6 +129,9 @@ def load_model():
 #     if input:
 #         prediction = pred(model, input)
 #         st.write(prediction)
+    if int(Age)-int(Tenure)<18: 
+        st.error('Внимание проверьте данные возраст и срок обслуживания')
+
    if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
         st.success('Вероятность оттока составляет {}'.format(output))
