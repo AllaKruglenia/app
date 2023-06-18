@@ -33,9 +33,30 @@ set_png_as_page_bg('ottok_klientov.jpg')
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: rgb(81, 200, 200);
+    background-color: #ce1126;
+    color: white;
+    height: 3em;
+    width: 12em;
+    border-radius:10px;
+    border:3px solid #000000;
+    font-size:20px;
+    font-weight: bold;
+    margin: auto;
+    display: block;
 }
+
+div.stButton > button:hover {
+	background:linear-gradient(to bottom, #ce1126 5%, #ff5a5a 100%);
+	background-color:#ce1126;
+}
+
+div.stButton > button:active {
+	position:relative;
+	top:3px;
+}
+
 </style>""", unsafe_allow_html=True)
+
 
 
 
