@@ -88,7 +88,26 @@ def main():
             """
     if int(Age)-int(Tenure)<18: 
         st.error('Внимание проверьте данные возраст и срок обслуживания')
- 
+        
+        
+    elif Balance < 1000 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
+        st.success('Вероятность оттока составляет более 90%.')
+        st.markdown(churn_html, unsafe_allow_html= True)
+
+    elif Balance > 2000 and EstimatedSalary > 2000 and CreditScore > 250:
+        st.success('Вероятность оттока составляет менее 40 %.')
+        st.markdown(no_churn_html, unsafe_allow_html= True)
+             
+    else:
+        output = predict_churn(CreditScore, Geography, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
+        st.success('Вероятность оттока составляет {0:.2f}'.format(output))
+    if output >= 85:
+        st.markdown(churn_html, unsafe_allow_html= True)
+    elif output >= 40:
+        st.markdown(mb_churn_html, unsafe_allow_html= True)
+    else:
+        st.markdown(no_churn_html, unsafe_allow_html= True)
+
     
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
@@ -125,28 +144,7 @@ def main():
         #     st.success('Вероятность оттока составляет менее 10%.')
         #     st.markdown(churn_html, unsafe_allow_html= True)
         
-        if int(Age)-int(Tenure)<18: 
-            st.error('Внимание проверьте данные возраст и срок обслуживания')
-            
-        
-        elif Balance < 1000 and EstimatedSalary < 500 and IsActiveMember == 0 and NumOfProducts == 1:
-            st.success('Вероятность оттока составляет более 90%.')
-            st.markdown(churn_html, unsafe_allow_html= True)
 
-        elif Balance > 2000 and EstimatedSalary > 2000 and CreditScore > 250:
-            # and predict_churn(CreditScore, Geography, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)  > 40:
-            st.success('Вероятность оттока составляет менее 40 %.')
-            st.markdown(no_churn_html, unsafe_allow_html= True)
-                
-        else:
-            output = predict_churn(CreditScore, Geography, Gender, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
-            st.success('Вероятность оттока составляет {0:.2f}'.format(output))
-            if output >= 85:
-                st.markdown(churn_html, unsafe_allow_html= True)
-            elif output >= 40:
-                st.markdown(mb_churn_html, unsafe_allow_html= True)
-            else:
-                st.markdown(no_churn_html, unsafe_allow_html= True)
 
         
 
