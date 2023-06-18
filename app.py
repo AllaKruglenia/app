@@ -149,5 +149,5 @@ st.sidebar.header('Проект "Отток клиентов"')
 
 
 st.sidebar.markdown('Курс Diving into Darkness of Data Science.')
-st.divider()  # 👈 Draws a horizontal rule
+st.sidebar.divider()
 st.sidebar.markdown('Подготовила проект Кругленя А.М.')
