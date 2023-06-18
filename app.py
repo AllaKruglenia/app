@@ -33,11 +33,11 @@ set_png_as_page_bg('ottok_klientov.jpg')
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: rgb(204, 49, 49);
+    background-color: rgb(90, 90, 90);
 }
 </style>""", unsafe_allow_html=True)
 
-st.button("test")
+
 
 classifier_name=['Random Forest']
 option = st.sidebar.selectbox('Алгоритм', classifier_name)
