@@ -65,7 +65,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
 def main():
     # st.title("Прогноз оттока клиентов")
-    st.sidebar.image('background.jpg')
+    st.sidebar.image('logo.jpg')
 
     html_temp = """
     <div style="background-color:white ;padding:10px">
