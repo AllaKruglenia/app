@@ -19,11 +19,19 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-st.sidebar.title('ИТ-АКАДЕМИЯ ПРИОРБАНК')
-st.sidebar.title('Проект "Отток клиентов"')
-
-st.sidebar.info('Курс Diving into Darkness of Data Science.')
-st.sidebar.info('Подготовила проект Кругленя А.М.') 
+st.markdown(
+    """
+    <style>
+    .reportview-container {
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFzljZpFVn-h0RJLKnldE0KBP1F-lB_VV-w&usqp=CAU")
+    }
+   .sidebar .sidebar-content {
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TwY4kqrJ5o1Je28Ro4ZOayfq9S_OaZFW5g&usqp=CAU")
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 
 def load_model():
@@ -57,6 +65,10 @@ if st.button("Предсказать отток клиентов"):
         prediction = pred(model, input)
         st.write(prediction)
         
-      
+st.sidebar.title('ИТ-АКАДЕМИЯ ПРИОРБАНК')
+st.sidebar.title('Проект "Отток клиентов"')
 
-st.sidebar.text('Учебный проект. Курс Diving into Darkness of Data Science, Тренер — Братковский Евгений Викторович. ИТ АКАДЕМИЯ ПРИОРБАНК 2023. Подготовила проект Кругленя А.М.')
+st.sidebar.info('Курс Diving into Darkness of Data Science.')
+st.sidebar.info('Подготовила проект Кругленя А.М.')      
+
+
