@@ -34,10 +34,7 @@ def load_model():
 
     model = load_model()
 
-st.sidebar.title('Проект "Отток клиентов", автор Кругленя А.М.')
-st.write("""
-Эта модель предсказывает уйдет клиент банка или останется!
-""")
+
 
 def user_input_features():
     Age = st.slider('Возраст', 18, 92, 31)
