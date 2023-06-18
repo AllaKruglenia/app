@@ -95,7 +95,7 @@ if st.button("Предсказать отток клиентов"):
 st.sidebar.title('ИТ-АКАДЕМИЯ ПРИОРБАНК')
 st.sidebar.title('Проект "Отток клиентов"')
 
-st.sidebar.text('Курс Diving into Darkness of Data Science.')
-st.sidebar.text('Подготовила проект Кругленя А.М.')      
+st.sidebar.markdown('Курс Diving into Darkness of Data Science.')
+st.sidebar.markdown('Подготовила проект Кругленя А.М.')      
 
 
