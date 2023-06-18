@@ -33,7 +33,7 @@ set_png_as_page_bg('ottok_klientov.jpg')
 m = st.markdown("""
 <style>
 div.stButton > button:first-child {
-    background-color: rgb(90, 90, 90);
+    background-color: rgb(81, 200, 200);
 }
 </style>""", unsafe_allow_html=True)
 
