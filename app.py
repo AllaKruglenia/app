@@ -129,7 +129,7 @@ input = user_input_features()
 
 
 if st.button("Предсказать отток клиентов"):
-    if input_data:
+    if input:
         prediction = pred(model, input)
         st.write(prediction)
         
