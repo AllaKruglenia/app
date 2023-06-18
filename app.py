@@ -1,13 +1,30 @@
-import time
 
+#####
+import sklearn
+
+# from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
+
+import streamlit as st
+import pickle
 import numpy as np
 import pandas as pd
 import pickle
 import streamlit as st
 
+import base64
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
 
-st.title('Предсказание на основе модели')
-st.text('Введите данные для предсказания')
+st.sidebar.title('ИТ-АКАДЕМИЯ ПРИОРБАНК')
+st.sidebar.title('Проект "Отток клиентов"')
+
+st.sidebar.info('Курс Diving into Darkness of Data Science.')
+st.sidebar.info('Подготовила проект Кругленя А.М.') 
+
 
 def load_model():
     with open("model.pickle", "rb") as file:
