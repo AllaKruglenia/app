@@ -149,4 +149,4 @@ st.sidebar.title('Проект "Отток клиентов"')
 
 
 st.sidebar.markdown('Курс Diving into Darkness of Data Science.')
-st.sidebar.markdown('Подготовила проект Кругленя А.М.')
+st.sidebar.caption('Подготовила проект Кругленя А.М.')
