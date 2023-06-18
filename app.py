@@ -19,40 +19,43 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-# st.markdown(
-#     """
-#     <style>
-#     .reportview-container {
-#         background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFzljZpFVn-h0RJLKnldE0KBP1F-lB_VV-w&usqp=CAU")
-#         background-size: cover;
-#     }
-#    .sidebar .sidebar-content {
-#         background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TwY4kqrJ5o1Je28Ro4ZOayfq9S_OaZFW5g&usqp=CAU")
-#         background-repeat: no-repeat;
-#     }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
-import base64
-
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
+st.markdown(
+    """
     <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
+    .reportview-container {
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFzljZpFVn-h0RJLKnldE0KBP1F-lB_VV-w&usqp=CAU")
+        background-size: 50%; 
+        background-size: 3.2em;
+        background-size: 12px;
+        background-size: auto;
+    }
+   .sidebar.sidebar-content {
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TwY4kqrJ5o1Je28Ro4ZOayfq9S_OaZFW5g&usqp=CAU")
+        background-repeat: no-repeat;
     }
     </style>
-    ''' % bin_str
+    """,
+    unsafe_allow_html=True
+)
+
+# import base64
+
+# @st.cache(allow_output_mutation=True)
+# def get_base64_of_bin_file(bin_file):
+#     with open(bin_file, 'rb') as f:
+#         data = f.read()
+#     return base64.b64encode(data).decode()
+
+# def set_png_as_page_bg(png_file):
+#     bin_str = get_base64_of_bin_file(png_file)
+#     page_bg_img = '''
+#     <style>
+#     body {
+#     background-image: url("data:image/png;base64,%s");
+#     background-size: cover;
+#     }
+#     </style>
+#     ''' % bin_str
     
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
