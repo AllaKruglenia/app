@@ -86,8 +86,8 @@ def main():
                <h2 style="color:green ;text-align:center;"> Хорошая новость, клиент остаётся в банке! </h2>
                </div>
             """
-    # if int(Age)-int(Tenure)<18: 
-    #     st.error('Внимание проверьте данные возраст и срок обслуживания')
+    if int(Age)-int(Tenure)<18: 
+        st.error('Внимание проверьте данные возраст и срок обслуживания')
  
     
     if st.button('Сделать прогноз'):
