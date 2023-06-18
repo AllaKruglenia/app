@@ -69,7 +69,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
 
 def main():
-    # st.title("Прогноз оттока клиентов")
+    st.title("Прогноз оттока клиентов")
     html_temp = """
     <div style="background-color:white ;padding:10px">
     <h2 style="color:red;text-align:center;">Прогноз оттока клиентов</h2>
@@ -99,8 +99,8 @@ def main():
                <h2 style="color:green ;text-align:center;"> Хорошая новость, клиент остаётся в банке! </h2>
                </div>
             """
-    # if int(Age)-int(Tenure)<18: 
-    #     st.error('Внимание проверьте данные возраст и срок обслуживания')
+    if int(Age)-int(Tenure)<18: 
+        st.error('Внимание проверьте данные возраст и срок обслуживания')
 
 def load_model():
     with open("model.pickle", "rb") as file:
