@@ -29,6 +29,7 @@ def set_png_as_page_bg(png_file):
     return
 set_png_as_page_bg('ottok_klientov.jpg')
 
+
 classifier_name=['Random Forest']
 option = st.sidebar.selectbox('Алгоритм', classifier_name)
 st.subheader(option)
@@ -57,12 +58,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 def main():
     # st.title("Прогноз оттока клиентов")
     st.sidebar.image('background.jpg')
-    [theme]
-    primaryColor="#FF7903"
-    backgroundColor="#0E1117"
-    secondaryBackgroundColor="#31333F"
-    textColor="#FAFAFA"
-    font="sans serif"
+
     html_temp = """
     <div style="background-color:white ;padding:10px">
     <h2 style="color:red;text-align:center;">Прогноз оттока клиентов</h2>
