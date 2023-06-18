@@ -19,21 +19,21 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFzljZpFVn-h0RJLKnldE0KBP1F-lB_VV-w&usqp=CAU")
-        background-size: cover;
-    }
-   .sidebar .sidebar-content {
-        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TwY4kqrJ5o1Je28Ro4ZOayfq9S_OaZFW5g&usqp=CAU")
-        background-repeat: no-repeat;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+# st.markdown(
+#     """
+#     <style>
+#     .reportview-container {
+#         background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgFzljZpFVn-h0RJLKnldE0KBP1F-lB_VV-w&usqp=CAU")
+#         background-size: cover;
+#     }
+#    .sidebar .sidebar-content {
+#         background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_TwY4kqrJ5o1Je28Ro4ZOayfq9S_OaZFW5g&usqp=CAU")
+#         background-repeat: no-repeat;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 
 import base64
 
