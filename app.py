@@ -145,8 +145,9 @@ if __name__=='__main__':
     main()
 
 st.sidebar.title('ИТ-АКАДЕМИЯ ПРИОРБАНК')
-st.sidebar.title('Проект "Отток клиентов"')
+st.sidebar.header('Проект "Отток клиентов"')
 
 
-st.sidebar.markdown('Курс Diving into Darkness of Data Science.')
-st.sidebar.caption('Подготовила проект Кругленя А.М.')
+st.sidebar.subheader('Курс Diving into Darkness of Data Science.')
+st.divider()  # 👈 Draws a horizontal rule
+st.sidebar.markdown('Подготовила проект Кругленя А.М.')
