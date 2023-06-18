@@ -144,8 +144,8 @@ def main():
 if __name__=='__main__':
     main()
 
-st.sidebar.title('**_ИТ-АКАДЕМИЯ ПРИОРБАНК_**')
-st.sidebar.header('Проект "Отток клиентов"')
+# st.sidebar.title('**_ИТ-АКАДЕМИЯ, ПРИОРБАНК_**')
+# st.sidebar.header('Проект "Отток клиентов"')
 
 
 st.sidebar.markdown('Курс Diving into Darkness of Data Science.')
